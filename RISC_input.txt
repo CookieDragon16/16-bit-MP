@@ -1,0 +1,4 @@
+ADD_OP R1 R2
+MUL_OP R1 R2
+HLT
+

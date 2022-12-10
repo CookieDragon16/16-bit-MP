@@ -1,0 +1,195 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\UPT stuffs\An 3\FIC\ERM16
+valu16
+Z1 Mx1 6 sv_std 3 std
+Z2 DXx6 sv_std 3 std 0 22 WnQ=;W1X^o9K1PIQTgInR3
+!s100 ;zYIKTdmi11Q^TgQzLhM82
+I43;gXR9]OA[m5jGc`WYoz3
+V3Yoa`zV]Ece8WJagP?kzU2
+S1
+Z3 w1669489089
+Z4 8alu16.sv
+Z5 Falu16.sv
+L0 1
+Z6 OV;L;6.5b;42
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vcontrol_unit
+R1
+R2
+!s100 bd86ogL=XSndMI]@mF?2n1
+IV:41XZOa@]PFoW_ebglRE3
+VZCUeHamaPAjRYXj>h><j^0
+S1
+Z7 w1581233202
+8control_unit.sv
+Fcontrol_unit.sv
+L0 1
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vERM16_microprocessor
+R1
+R2
+!s100 klKSNc]P5Z>W9c@>0LhJZ2
+IJX48HGeO62k]PNh1Nd]Um0
+VG`WkG`1Rdo@GkU^@=coJf2
+S1
+Z8 w1670674935
+Z9 8ERM16_microprocessor.sv
+Z10 FERM16_microprocessor.sv
+L0 14
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+n@e@r@m16_microprocessor
+vERM16_tb
+R1
+R2
+!s100 `oSJIiLkYV<2LfnN=MkRE0
+I@bnnTce8i9N9BYnl5>8UQ3
+V:an09NdHDMX;_bz7;^iI93
+S1
+R8
+R9
+R10
+L0 118
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+n@e@r@m16_tb
+vextension
+R1
+R2
+!s100 0WTXRT49Cd7EhzkLCEkYJ2
+IM=Jd;H`=kVf8TOjbBUmc70
+VdL1eZ[QECPzFN]`lDD_[X0
+S1
+R7
+8extension.sv
+Fextension.sv
+L0 1
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vlatch_mem
+R1
+R2
+!s100 jCjV<^G9]gCYP9L:?:0_:0
+IC3X:T9z5bZiJ^T5mJ?D_L2
+VAAUzg4TdL1E<4_lVMVOif2
+S1
+R8
+R9
+R10
+L0 104
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vmuxflags
+R1
+R2
+!s100 R>Y_lLc[haT`0HNVfVaN20
+IdEnX7fZ_:[G>C5lK<:OKi0
+V7koeV[TEzXZ1TX^La6[Mh3
+S1
+R7
+8muxflags.sv
+Fmuxflags.sv
+L0 1
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vmuxN
+R1
+R2
+!s100 8iE[D>GchhlfK6Vdo51fJ1
+Ij6NU4HhkUZaFi1oLj409]3
+VL5:_9>8IR7;[56<TF5hSZ0
+S1
+R7
+8muxN.sv
+FmuxN.sv
+L0 1
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+nmux@n
+vreg_file
+R1
+R2
+!s100 g7W[>O<`j;Z>QjnFKO@`<0
+IX8S1YI6HI<=oT?`fYYk5P3
+V7E::NVH<?Xh5c8h?An;0U2
+S1
+w1670669562
+8reg_file.sv
+Freg_file.sv
+L0 1
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vregister
+R1
+R2
+!s100 iKhOej[BQ<24Ndm;EJ_<;2
+Ik6fW2=ATOo>5ER1DQ4BKE0
+VaiNh5]d6_OTP9c<TZQcEc1
+S1
+R7
+8register.sv
+Fregister.sv
+L0 1
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vtb_alu16
+R1
+R2
+!s100 5J6L?mTX5[JikTikK0:Cn3
+If`YTFCd;B6gA:][iC8Y<d1
+VfSP7n>@1d]j530kFPY?:U2
+S1
+R3
+R4
+R5
+L0 73
+R6
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
