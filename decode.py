@@ -24,71 +24,71 @@ if __name__ == '__main__':
             elif words[0] == "IN":
                 file_output.write("000110\n")
             elif words[0] == "OUT":
-                file_output.write("000110\n")
-            elif words[0] == "CH":
                 file_output.write("000111\n")
-            elif words[0] == "RET":
+            elif words[0] == "CH":
                 file_output.write("001000\n")
-            elif words[0] == "ADD":
+            elif words[0] == "RET":
                 file_output.write("001001\n")
-            elif words[0] == "SUB":
+            elif words[0] == "ADD":
                 file_output.write("001010\n")
-            elif words[0] == "MUL":
+            elif words[0] == "SUB":
                 file_output.write("001011\n")
-            elif words[0] == "DIV":
+            elif words[0] == "MUL":
                 file_output.write("001100\n")
-            elif words[0] == "MVN":
+            elif words[0] == "DIV":
                 file_output.write("001101\n")
-            elif words[0] == "OR":
+            elif words[0] == "MVN":
                 file_output.write("001110\n")
-            elif words[0] == "AND":
+            elif words[0] == "OR":
                 file_output.write("001111\n")
-            elif words[0] == "ORN":
+            elif words[0] == "AND":
                 file_output.write("010000\n")
-            elif words[0] == "ANDN":
+            elif words[0] == "ORN":
                 file_output.write("010001\n")
-            elif words[0] == "EOR":
+            elif words[0] == "ANDN":
                 file_output.write("010010\n")
-            elif words[0] == "EON":
+            elif words[0] == "EOR":
                 file_output.write("010011\n")
-            elif words[0] == "LSL":
+            elif words[0] == "EON":
                 file_output.write("010100\n")
-            elif words[0] == "LSR":
+            elif words[0] == "LSL":
                 file_output.write("010101\n")
-            elif words[0] == "ASR":
+            elif words[0] == "LSR":
                 file_output.write("010110\n")
-            elif words[0] == "REV":
+            elif words[0] == "ASR":
                 file_output.write("010111\n")
-            elif words[0] == "J":
+            elif words[0] == "REV":
                 file_output.write("011000\n")
-            elif words[0] == "JZ":
+            elif words[0] == "J":
                 file_output.write("011001\n")
-            elif words[0] == "JNZ":
+            elif words[0] == "JZ":
                 file_output.write("011010\n")
-            elif words[0] == "JC":
+            elif words[0] == "JNZ":
                 file_output.write("011011\n")
-            elif words[0] == "JNS":
+            elif words[0] == "JC":
                 file_output.write("011100\n")
-            elif words[0] == "JO":
+            elif words[0] == "JNS":
                 file_output.write("011101\n")
-            elif words[0] == "JNO":
+            elif words[0] == "JO":
                 file_output.write("011110\n")
-            elif words[0] == "JP":
+            elif words[0] == "JNO":
                 file_output.write("011111\n")
-            elif words[0] == "JNP":
+            elif words[0] == "JP":
                 file_output.write("100000\n")
-            elif words[0] == "JG":
+            elif words[0] == "JNP":
                 file_output.write("100001\n")
-            elif words[0] == "JL":
+            elif words[0] == "JG":
                 file_output.write("100010\n")
-            elif words[0] == "JNG":
+            elif words[0] == "JL":
                 file_output.write("100011\n")
-            elif words[0] == "JNL":
+            elif words[0] == "JNG":
                 file_output.write("100100\n")
-            elif words[0] == "CMP":
+            elif words[0] == "JNL":
                 file_output.write("100101\n")
-            elif words[0] == "MOD":
+            elif words[0] == "CMP":
                 file_output.write("100110\n")
+            elif words[0] == "MOD":
+                file_output.write("100111\n")
             else :
                 print("OPERATION UNKNOWN: ")
                 print(words[0])
