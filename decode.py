@@ -16,11 +16,8 @@ if __name__ == '__main__':
             words = command.split(" ")
             if words[0] in command_list:
                 command_number=command_list.index(words[0])
-                file_output.write(getbinary(command_number, 8)+"\n")
+                file_output.write(getbinary(command_number, 6)+"\n")
             else :
                 print("OPERATION UNKNOWN: "+str(words[0]))
                 exit(1)
-                
-            if words[1] in regs_list:
-                #TODO IMPLEMENT REGISTER DECODE
     sys.exit(0)

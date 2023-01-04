@@ -6,190 +6,181 @@ Z0 dD:\UPT stuffs\An 3\FIC\ERM16
 valu16
 Z1 Mx1 6 sv_std 3 std
 Z2 DXx6 sv_std 3 std 0 22 WnQ=;W1X^o9K1PIQTgInR3
-Id2?`e7LmDF5D:]XYaieNZ1
+!s100 ;zYIKTdmi11Q^TgQzLhM82
+I43;gXR9]OA[m5jGc`WYoz3
 V3Yoa`zV]Ece8WJagP?kzU2
 S1
 Z3 w1669489089
-Z4 8D:/UPT stuffs/An 3/FIC/ERM16/alu16.sv
-Z5 FD:/UPT stuffs/An 3/FIC/ERM16/alu16.sv
+Z4 8alu16.sv
+Z5 Falu16.sv
 L0 1
 Z6 OV;L;6.5b;42
 r1
-31
-Z7 !s102 -nocovercells
-Z8 o-work work -sv -nocovercells -O0
-!s100 ;zYIKTdmi11Q^TgQzLhM82
 !s85 0
+31
 !s101 -O0
+o-O0
 vcontrol_unit
 R1
 R2
-I=PTS]l[2Kahen4gS3^<zA1
-VZCUeHamaPAjRYXj>h><j^0
+!s100 4kUV^BUc16JceQh3;`]?m3
+I878HFL3l9Wk`z6igYKW@R2
+VXZ3Y2f9bB71<mM8EePb@S1
 S1
-Z9 w1581233202
-8D:/UPT stuffs/An 3/FIC/ERM16/control_unit.sv
-FD:/UPT stuffs/An 3/FIC/ERM16/control_unit.sv
+w1672842231
+8control_unit.sv
+Fcontrol_unit.sv
 L0 1
 R6
 r1
-31
-R7
-R8
-!s100 bd86ogL=XSndMI]@mF?2n1
 !s85 0
+31
 !s101 -O0
+o-O0
 vERM16_microprocessor
 R1
 R2
-IEHEkoJJ3XQ85S@eUnGoiZ0
+!s100 nAVXLn1XW=NoJCANhJa0i1
+I00=_GlXzQRmh;ZYF28@8j3
 VG`WkG`1Rdo@GkU^@=coJf2
 S1
-Z10 w1670767836
-Z11 8D:/UPT stuffs/An 3/FIC/ERM16/ERM16_microprocessor.sv
-Z12 FD:/UPT stuffs/An 3/FIC/ERM16/ERM16_microprocessor.sv
-L0 14
+Z7 w1672842664
+Z8 8ERM16_microprocessor.sv
+Z9 FERM16_microprocessor.sv
+L0 15
 R6
 r1
-31
-R7
-R8
-n@e@r@m16_microprocessor
-!s100 klKSNc]P5Z>W9c@>0LhJZ2
 !s85 0
+31
 !s101 -O0
+o-O0
+n@e@r@m16_microprocessor
 vERM16_tb
 R1
 R2
-IzQKiPogl>BQ31Mbb26SG?1
+!s100 ;7N<O8`K42XXNaddJHNSJ0
+I0EM:`WVZW8MMWEia;zoY61
 V:an09NdHDMX;_bz7;^iI93
 S1
-R10
-R11
-R12
-L0 118
-R6
-r1
-31
 R7
 R8
-n@e@r@m16_tb
-!s100 fQ;P6RDYIc1UKnFfSFm;>3
+R9
+L0 119
+R6
+r1
 !s85 0
+31
 !s101 -O0
+o-O0
+n@e@r@m16_tb
 vextension
 R1
 R2
-I7k;WZ3fVD]FD1@[11cm9K0
+!s100 0WTXRT49Cd7EhzkLCEkYJ2
+IM=Jd;H`=kVf8TOjbBUmc70
 VdL1eZ[QECPzFN]`lDD_[X0
 S1
-R9
-8D:/UPT stuffs/An 3/FIC/ERM16/extension.sv
-FD:/UPT stuffs/An 3/FIC/ERM16/extension.sv
+Z10 w1581233202
+8extension.sv
+Fextension.sv
 L0 1
 R6
 r1
-31
-R7
-R8
-!s100 0WTXRT49Cd7EhzkLCEkYJ2
 !s85 0
+31
 !s101 -O0
+o-O0
 vlatch_mem
 R1
 R2
-I3z1IkOcck7AlR1zYWWUOG0
+!s100 V58aeD4QVn>jEPhE]VmJo1
+I4TzOGZfQAGZC:5E<`Ch]52
 VAAUzg4TdL1E<4_lVMVOif2
 S1
-R10
-R11
-R12
-L0 104
-R6
-r1
-31
 R7
 R8
-!s100 jCjV<^G9]gCYP9L:?:0_:0
+R9
+L0 105
+R6
+r1
 !s85 0
+31
 !s101 -O0
+o-O0
 vmuxflags
 R1
 R2
-Imzbi=U8g]DoM0iHF1B8k90
+!s100 R>Y_lLc[haT`0HNVfVaN20
+IdEnX7fZ_:[G>C5lK<:OKi0
 V7koeV[TEzXZ1TX^La6[Mh3
 S1
-R9
-8D:/UPT stuffs/An 3/FIC/ERM16/muxflags.sv
-FD:/UPT stuffs/An 3/FIC/ERM16/muxflags.sv
+R10
+8muxflags.sv
+Fmuxflags.sv
 L0 1
 R6
 r1
-31
-R7
-R8
-!s100 R>Y_lLc[haT`0HNVfVaN20
 !s85 0
+31
 !s101 -O0
+o-O0
 vmuxN
 R1
 R2
-I4JCL6Me87oGma[M0RIMzl2
+!s100 8iE[D>GchhlfK6Vdo51fJ1
+Ij6NU4HhkUZaFi1oLj409]3
 VL5:_9>8IR7;[56<TF5hSZ0
 S1
-R9
-8D:/UPT stuffs/An 3/FIC/ERM16/muxN.sv
-FD:/UPT stuffs/An 3/FIC/ERM16/muxN.sv
+R10
+8muxN.sv
+FmuxN.sv
 L0 1
 R6
 r1
-31
-R7
-R8
-nmux@n
-!s100 8iE[D>GchhlfK6Vdo51fJ1
 !s85 0
+31
 !s101 -O0
+o-O0
+nmux@n
 vreg_file
 R1
 R2
-I>V8H_?Joa^fVGL]EQnL`>0
+!s100 g7W[>O<`j;Z>QjnFKO@`<0
+IX8S1YI6HI<=oT?`fYYk5P3
 V7E::NVH<?Xh5c8h?An;0U2
 S1
 w1670669562
-8D:/UPT stuffs/An 3/FIC/ERM16/reg_file.sv
-FD:/UPT stuffs/An 3/FIC/ERM16/reg_file.sv
+8reg_file.sv
+Freg_file.sv
 L0 1
 R6
 r1
-31
-R7
-R8
-!s100 g7W[>O<`j;Z>QjnFKO@`<0
 !s85 0
+31
 !s101 -O0
+o-O0
 vregister
 R1
 R2
 !s100 iKhOej[BQ<24Ndm;EJ_<;2
-Iz>j@YkA23Ud89ecMh:A3o3
+Ik6fW2=ATOo>5ER1DQ4BKE0
 VaiNh5]d6_OTP9c<TZQcEc1
 S1
-R9
-8D:/UPT stuffs/An 3/FIC/ERM16/register.sv
-FD:/UPT stuffs/An 3/FIC/ERM16/register.sv
+R10
+8register.sv
+Fregister.sv
 L0 1
 R6
 r1
 !s85 0
 31
 !s101 -O0
-R7
-R8
+o-O0
 vtb_alu16
 R1
 R2
-IYYEcHgcYZHZ[RG3I8EeU60
+!s100 5J6L?mTX5[JikTikK0:Cn3
+If`YTFCd;B6gA:][iC8Y<d1
 VfSP7n>@1d]j530kFPY?:U2
 S1
 R3
@@ -198,9 +189,7 @@ R5
 L0 73
 R6
 r1
-31
-R7
-R8
-!s100 5J6L?mTX5[JikTikK0:Cn3
 !s85 0
+31
 !s101 -O0
+o-O0

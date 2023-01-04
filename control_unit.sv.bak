@@ -6,7 +6,7 @@ module control_unit
  
  output logic wrmem,ioe,intreq,decodeinstr,we3,rst,hlt,wrpc,prefix,jump,ch,ret,wrflags,seladdr,
  
- output logic [FLAGS_size-1:0] Jcc,output logic [4:0] func,output logic [2:0] stwr,
+ output logic [FLAGS_size-1:0] Jcc,output logic [4:0] func,output logic [3:0] stwr,
  
  output logic [1:0] spc_a,output logic [2:0] spc_b);
  

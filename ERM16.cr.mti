@@ -34,14 +34,12 @@ Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
 Top level modules:
 	muxflags
 
-} {} {}} {D:/UPT stuffs/An 3/FIC/ERM16/ERM16_microprocessor.sv} {1 {vlog -work work -sv -nocovercells {D:/UPT stuffs/An 3/FIC/ERM16/ERM16_microprocessor.sv}
+} {} {}} {D:/UPT stuffs/An 3/FIC/ERM16/control_unit.sv} {1 {vlog -work work -sv -nocovercells {D:/UPT stuffs/An 3/FIC/ERM16/control_unit.sv}
 Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
--- Compiling module ERM16_microprocessor
--- Compiling module latch_mem
--- Compiling module ERM16_tb
+-- Compiling module control_unit
 
 Top level modules:
-	ERM16_tb
+	control_unit
 
 } {} {}} {D:/UPT stuffs/An 3/FIC/ERM16/muxN.sv} {1 {vlog -work work -sv -nocovercells {D:/UPT stuffs/An 3/FIC/ERM16/muxN.sv}
 Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
@@ -49,12 +47,5 @@ Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
 
 Top level modules:
 	muxN
-
-} {} {}} {D:/UPT stuffs/An 3/FIC/ERM16/control_unit.sv} {1 {vlog -work work -sv -nocovercells {D:/UPT stuffs/An 3/FIC/ERM16/control_unit.sv}
-Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
--- Compiling module control_unit
-
-Top level modules:
-	control_unit
 
 } {} {}}
