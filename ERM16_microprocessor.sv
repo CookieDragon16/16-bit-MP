@@ -123,7 +123,7 @@ module ERM16_tb;
 	reg init;
 	reg [15:0] DI;
 	wire [15:0] ADDR_BUS, DO;
-	wire wrmem,ioe,intre;
+	wire wrmem,ioe,intreq;
 	 // Instantiate the Unit Under Test (UUT)
 	ERM16_microprocessor uut (
 		.clk(clk),
@@ -135,17 +135,19 @@ module ERM16_tb;
 		.ioe(ioe),
 		.intreq(intreq)
 	);
-
+  
 	initial begin
 	   clk <=0;
 	   #20;
 	   init <= 1;
 	   #30;
+	   init <= 0;
+	   #30;
 	   // MOV R0, #1
-	   DI=16'b0000111000001010;
+	   DI=16'b0000101001000001;
 	   #100;
 	   // OUT R0??
-	   DI=16'b0001111000000000;
+	   DI=16'b0001111001000100;
 	   #100;
 	   // HLT??
 	   DI=16'b0000110000000000;

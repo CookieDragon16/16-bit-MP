@@ -70,6 +70,7 @@ module control_unit
 	end
 
 	else begin
+	  
 
 		if (hlt) state <= state;
 
@@ -720,4 +721,64 @@ module control_unit
 	
  end
  
+endmodule
+
+
+module control_unit_tb;
+  reg [6:0] opcode;
+  reg clk,state_flag_bit,init;
+
+  wire wrmem,ioe,intreq,decodeinstr,we3,rst,hlt,wrpc,prefix,jump,ch,ret,wrflags,seladdr;
+
+  wire [5:0] Jcc;
+  wire [4:0] func;
+  wire [2:0] stwr,spc_b;
+  wire [1:0] spc_a;
+  control_unit uut(
+    .opcode(opcode),
+    .clk(clk),
+    .state_flag_bit(state_flag_bit),
+    .init(init),
+    .wrmem(wrmem),
+    .ioe(ioe),
+    .intreq(intreq),
+    .decodeinstr(decodeinstr),
+    .we3(we3),
+    .rst(rst),
+    .hlt(hlt),
+    .wrpc(wrpc),
+    .prefix(prefix),
+    .jump(jump),
+    .ch(ch),
+    .ret(ret),
+    .wrflags(wrflags),
+    .seladdr(seladdr),
+    .Jcc(Jcc),
+    .func(func),
+    .stwr(stwr),
+    .spc_a(spc_a),
+    .spc_b(spc_b)
+  );
+  
+  initial begin
+	   clk <=0;
+	   #20;
+	   init <= 1;
+	   #30;
+	   init <= 0;
+	   #30;
+	   opcode <= 6'b001010;
+	   #30;
+	   opcode <= 6'b000111;
+	   #30;
+	   opcode <= 6'b000011;
+	   #30;
+	   opcode <= 6'b000110;
+	   #30;
+	   $finish;
+	end
+  
+  always begin
+		#5 clk = ~clk;
+	end
 endmodule
