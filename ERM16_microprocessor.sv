@@ -136,24 +136,25 @@ module ERM16_tb;
 		.intreq(intreq)
 	);
   
-	initial begin
-	   clk <=0;
-	   #20;
-	   init <= 1;
-	   #30;
-	   init <= 0;
-	   #30;
-	   // MOV R0, #1
-	   DI=16'b0000101001000001;
-	   #100;
-	   // OUT R0??
-	   DI=16'b0001111001000100;
-	   #100;
-	   // HLT??
-	   DI=16'b0000110000000000;
-	   #100;
-	   $finish;
-	end
+  integer outfile0;
+  reg [15:0] line;
+  initial begin
+      clk=0;
+      #10;
+      init=1;
+      #30;
+      init=0;
+      #30
+     outfile0=$fopen("RISC_MC.txt","r");   //"r" means reading and "w" means writing
+     //read line by line.
+      while (! $feof(outfile0)) begin //read until an "end of file" is reached.
+         $fscanf(outfile0,"%b\n",line); //scan each line and get the value as an hexadecimal, use %b for binary and %d for decimal.
+         DI=line;
+         #30; //wait some time as needed.
+      end 
+      //once reading and writing is finished, close the file.
+      $fclose(outfile0);
+  end
 		  
 	always begin
 		#5 clk = ~clk;
