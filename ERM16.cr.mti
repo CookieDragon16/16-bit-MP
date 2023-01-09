@@ -50,11 +50,4 @@ Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
 Top level modules:
 	muxN
 
-} {} {}} {D:/UPT stuffs/An 3/FIC/ERM16/control_unit.sv} {1 {vlog -work work -sv -nocovercells {D:/UPT stuffs/An 3/FIC/ERM16/control_unit.sv}
-Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
--- Compiling module control_unit
-
-Top level modules:
-	control_unit
-
 } {} {}}

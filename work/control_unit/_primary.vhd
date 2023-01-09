@@ -25,7 +25,7 @@ entity control_unit is
         seladdr         : out    vl_logic;
         Jcc             : out    vl_logic_vector;
         func            : out    vl_logic_vector(4 downto 0);
-        stwr            : out    vl_logic_vector(3 downto 0);
+        stwr            : out    vl_logic_vector(2 downto 0);
         spc_a           : out    vl_logic_vector(1 downto 0);
         spc_b           : out    vl_logic_vector(2 downto 0)
     );

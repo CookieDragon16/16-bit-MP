@@ -765,8 +765,6 @@ module control_unit_tb;
 	   #20;
 	   init <= 1;
 	   #30;
-	   init <= 0;
-	   #30;
 	   opcode <= 6'b001010;
 	   #30;
 	   opcode <= 6'b000111;

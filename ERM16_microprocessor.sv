@@ -1,3 +1,4 @@
+
 `ifndef PARAMETER_H_
 `define PARAMETER_H_
 // fpga4student.com 
@@ -40,7 +41,7 @@ logic decodeinstr,we3,rst,hlt,wrpc,prefix,jump,ch,ret,wrflags,seladdr,state_flag
 
  logic [5:0] Jcc;
  logic [4:0] func;
- logic [3:0] stwr;
+ logic [2:0] stwr;
  
  logic [1:0] spc_a;
  
@@ -69,9 +70,9 @@ extension ext16(q_op[5:0],imm);
 
 register #(16*2) DR({RD1,RD2},clk,rst,~hlt,{a,b});
 
-muxN mux_spc_a ({DO_PC,a},spc_a,A_ALU);
+muxN #(16,2,2) mux_spc_a ({DO_PC,a},spc_a,A_ALU);
 
-muxN #(16,3,2) mux_spc_b ({16'b010,imm,b},spc_b,B_ALU);
+muxN #(16,3,3) mux_spc_b ({16'b010,imm,b},spc_b,B_ALU);
 
 alu16 ALU(A_ALU,B_ALU,func,flags_out,flags_in,ALUresult);
 
@@ -79,7 +80,7 @@ latch_mem save_aluresultREG(ALUresult,rst,~wrpc,w_ALUresult);
 
 register flags(flags_in,clk,rst,wrflags,flags_out);
 
-muxflags mux_Jcc(flags_out,Jcc,state_flag_bit);
+muxflags mux_Jcc(flags_out,Jcc[2:0],state_flag_bit);
 
 muxN mux_prefix({imm,a},prefix,w1);
 
@@ -122,7 +123,7 @@ module ERM16_tb;
 	reg init;
 	reg [15:0] DI;
 	wire [15:0] ADDR_BUS, DO;
-	wire wrmem,ioe,intre;
+	wire wrmem,ioe,intreq;
 	 // Instantiate the Unit Under Test (UUT)
 	ERM16_microprocessor uut (
 		.clk(clk),
@@ -134,23 +135,26 @@ module ERM16_tb;
 		.ioe(ioe),
 		.intreq(intreq)
 	);
-
-	initial begin
-	   clk <=0;
-	   #20;
-	   init <= 1;
-	   #30;
-	   // MOV R0, #1
-	   DI=16'b0000001100011111;
-	   #30;
-	   //OUT R0??
-	   DI=16'b0001000000000000;
-	   #30;
-	   // HLT??
-	   DI=16'b0000110000000000;
-	   #30;
-	   $finish;
-	end
+  
+  integer outfile0;
+  reg [15:0] line;
+  initial begin
+      clk=0;
+      #10;
+      init=1;
+      #30;
+      init=0;
+      #30
+     outfile0=$fopen("RISC_MC.txt","r");   //"r" means reading and "w" means writing
+     //read line by line.
+      while (! $feof(outfile0)) begin //read until an "end of file" is reached.
+         $fscanf(outfile0,"%b\n",line); //scan each line and get the value as an hexadecimal, use %b for binary and %d for decimal.
+         DI=line;
+         #30; //wait some time as needed.
+      end 
+      //once reading and writing is finished, close the file.
+      $fclose(outfile0);
+  end
 		  
 	always begin
 		#5 clk = ~clk;
