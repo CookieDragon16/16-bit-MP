@@ -137,8 +137,10 @@ module ERM16_tb;
 	);
   
   integer outfile0;
+  reg [5:0] prev_op;
   reg [15:0] line;
   initial begin
+      prev_op=0;
       clk=0;
       #10;
       init=1;
@@ -150,10 +152,16 @@ module ERM16_tb;
       while (! $feof(outfile0)) begin //read until an "end of file" is reached.
          $fscanf(outfile0,"%b\n",line); //scan each line and get the value as an hexadecimal, use %b for binary and %d for decimal.
          DI=line;
-         #30; //wait some time as needed.
+         #50;
+         if (prev_op==6'b000111) begin
+            $display("OUTPUT:%d",DO[10:0]);
+         end
+         #250; //wait some time as needed.
+         prev_op=DI[15:10];
       end 
       //once reading and writing is finished, close the file.
       $fclose(outfile0);
+      $finish;
   end
 		  
 	always begin

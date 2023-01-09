@@ -137,7 +137,7 @@ module ERM16_tb;
 	);
   
   integer outfile0;
-  reg [7:0] line;
+  reg [15:0] line;
   initial begin
       clk=0;
       #10;
@@ -154,6 +154,7 @@ module ERM16_tb;
       end 
       //once reading and writing is finished, close the file.
       $fclose(outfile0);
+      $finish;
   end
 		  
 	always begin

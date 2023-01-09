@@ -22,6 +22,9 @@ if __name__ == '__main__':
     for command in commands:
         if command.strip():
             words = command.split(" ")
+            if words[0] == 'IN':
+                print("INPUT NOT WORKING D:\nPLEASE USE MOV INSTEAD.")
+                exit(1)
             if words[0] == 'HLT':
                 file_output.write('0000110000000000')
                 exit(1)
