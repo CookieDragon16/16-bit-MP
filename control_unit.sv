@@ -1,14 +1,25 @@
 module control_unit
 
- #(parameter FLAGS_size = 6)
+#(parameter FLAGS_size = 6)
+ (
+  input  logic [6:0] opcode,
+  input  logic clk,
+  input  logic state_flag_bit,
+  input  logic init,
 
- (input logic [6:0] opcode,input logic clk,state_flag_bit,init,
- 
- output logic wrmem,ioe,intreq,decodeinstr,we3,rst,hlt,wrpc,prefix,jump,ch,ret,wrflags,seladdr,
- 
- output logic [FLAGS_size-1:0] Jcc,output logic [4:0] func,output logic [2:0] stwr,
- 
- output logic [1:0] spc_a,output logic [2:0] spc_b);
+  input  logic stk_pop_valid,      // <-- ADĂUGAT
+
+  output logic wrmem,ioe,intreq,decodeinstr,we3,rst,hlt,wrpc,prefix,jump,ch,ret,wrflags,seladdr,
+
+  output logic stk_push,            // <-- ADĂUGAT
+  output logic stk_pop,             // <-- ADĂUGAT
+
+  output logic [FLAGS_size-1:0] Jcc,
+  output logic [4:0] func,
+  output logic [2:0] stwr,
+  output logic [1:0] spc_a,
+  output logic [2:0] spc_b
+ );
  
 
  typedef enum logic [5:0] {LDW = 6'b0,STW,MOV,
@@ -21,7 +32,8 @@ module control_unit
 			
 			LSR,ASR,REV,
 			
-			J,JZ,JNZ,JC,JNC,JO,JNO,JP,JNP,JG,JL,JNG,JNL,CMP,MOD} instr;
+			J,JZ,JNZ,JC,JNC,JO,JNO,JP,JNP,JG,JL,JNG,JNL,CMP,MOD,  PUSH, POP              // <-- ADĂUGATE LA FINAL
+} instr;
 
 	typedef enum logic [4:0] {ADD_OP = 5'b0,SUB_OP,MUL_OP,DIV_OP,MOD_OP,
 			
@@ -67,6 +79,8 @@ module control_unit
 		seladdr <= 0;
 		
 		state <= 0;
+		stk_push <= 0;
+stk_pop  <= 0;
 	end
 
 	else begin
@@ -105,6 +119,8 @@ module control_unit
 				wrflags <= 0;
 				Jcc <= 'b0;
 				seladdr <= 0;
+				stk_push <= 0;
+				stk_pop  <= 0;
 			   end
 			   
 			 1: begin // decode
@@ -579,7 +595,21 @@ module control_unit
 						func <= NOP_OP;
 						wrpc <= 0;
 						end
-					    
+						
+						PUSH: begin // PUSH
+						
+						stk_push <= 1;
+						func <= NOP_OP;
+						wrpc <= 0;
+						end
+						
+						POP: begin // POP
+						
+						stk_pop <= 1;
+						func <= NOP_OP;
+						wrpc <= 0;
+						end
+					
 					    default: state <= 0;
 				endcase
 				
@@ -718,6 +748,23 @@ module control_unit
 			endcase	
 			 
 		end
+				6: begin // unused
+
+				stk_pop <= 1'b0;
+
+				if(stk_pop_valid) begin
+
+					stwr <= 3;
+					we3 <= 1;
+
+					state <= 0;
+
+				end
+				
+
+				end
+
+
 	
  end
  

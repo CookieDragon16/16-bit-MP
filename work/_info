@@ -1,212 +1,314 @@
 m255
-K3
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
 cModel Technology
-Z0 dD:\UPT stuffs\An 3\FIC\ERM16
+Z0 dC:/16-bit-MP
 valu16
-Z1 Mx1 6 sv_std 3 std
-Z2 DXx6 sv_std 3 std 0 22 WnQ=;W1X^o9K1PIQTgInR3
-!s100 ;zYIKTdmi11Q^TgQzLhM82
-I43;gXR9]OA[m5jGc`WYoz3
-V3Yoa`zV]Ece8WJagP?kzU2
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1769095105
+!i10b 1
+!s100 oSG7`ih=FN4S<QVP6b9P_1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I82D7nka<FoJ:m`;LG`>681
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
-Z3 w1669489089
-Z4 8alu16.sv
-Z5 Falu16.sv
-L0 1
-Z6 OV;L;6.5b;42
+R0
+Z5 w1769093737
+Z6 8C:/16-bit-MP/alu16.sv
+Z7 FC:/16-bit-MP/alu16.sv
+!i122 9
+L0 1 71
+Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+Z9 !s108 1769095105.000000
+Z10 !s107 C:/16-bit-MP/alu16.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/16-bit-MP/alu16.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
 vcontrol_unit
 R1
 R2
-!s100 S[;V^lb@JGG57z6[9D8gV3
-IR?;MMK2Yhm^T803?IV[Dd3
-VXZ3Y2f9bB71<mM8EePb@S1
+!i10b 1
+!s100 ;60EKd:90Q@dF9:<XzM6`3
+R3
+I4Mh:1Iknl:D7eXn9V@RNb2
+R4
 S1
-Z7 w1673291498
-Z8 8control_unit.sv
-Z9 Fcontrol_unit.sv
-L0 1
-R6
+R0
+R5
+Z14 8C:/16-bit-MP/control_unit.sv
+Z15 FC:/16-bit-MP/control_unit.sv
+!i122 10
+L0 1 724
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R9
+Z16 !s107 C:/16-bit-MP/control_unit.sv|
+Z17 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/16-bit-MP/control_unit.sv|
+!i113 1
+R12
+R13
 vcontrol_unit_tb
 R1
 R2
-!s100 M2RCXTMY12c@EZNB?bQ`H1
-IQoOKO`0CbkB<NB`DnG9d93
-V0fe_`n]a=8]g`ekH8PNmB1
+!i10b 1
+!s100 G]Co`<SM?D7E0@SXolXPN1
+R3
+IB9Dhh`e`f3JbW95?[17:O1
+R4
 S1
-R7
+R0
+R5
+R14
+R15
+!i122 10
+L0 727 58
 R8
-R9
-L0 727
-R6
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R9
+R16
+R17
+!i113 1
+R12
+R13
 vERM16_microprocessor
 R1
 R2
-!s100 nAVXLn1XW=NoJCANhJa0i1
-I00=_GlXzQRmh;ZYF28@8j3
-VG`WkG`1Rdo@GkU^@=coJf2
+!i10b 1
+!s100 [lh5i=fW1ZDCR_8fDKUdl3
+R3
+I8;NkQ`5FoWMK1@R_6NnW93
+R4
 S1
-Z10 w1673292174
-Z11 8ERM16_microprocessor.sv
-Z12 FERM16_microprocessor.sv
-L0 15
-R6
+R0
+R5
+Z18 8C:/16-bit-MP/ERM16_microprocessor.sv
+Z19 FC:/16-bit-MP/ERM16_microprocessor.sv
+!i122 11
+L0 15 89
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R9
+Z20 !s107 C:/16-bit-MP/ERM16_microprocessor.sv|
+Z21 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/16-bit-MP/ERM16_microprocessor.sv|
+!i113 1
+R12
+R13
 n@e@r@m16_microprocessor
 vERM16_tb
 R1
 R2
-!s100 2LbCko76Tnzo;<JdW^lE?0
-IVgfWR5UCfXzen@6G:<zGG1
-V:an09NdHDMX;_bz7;^iI93
+!i10b 1
+!s100 YlX[HQ^>7F:<<i=hZO[0B2
+R3
+IifV7kUWLe@hcDEA9H1zQL0
+R4
 S1
-R10
-R11
-R12
-L0 119
-R6
+R0
+R5
+R18
+R19
+!i122 11
+L0 119 53
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R9
+R20
+R21
+!i113 1
+R12
+R13
 n@e@r@m16_tb
 vextension
 R1
 R2
-!s100 0WTXRT49Cd7EhzkLCEkYJ2
-IM=Jd;H`=kVf8TOjbBUmc70
-VdL1eZ[QECPzFN]`lDD_[X0
+!i10b 1
+!s100 ei<U^<P8D?B5MW>82m[Dz0
+R3
+ImO=QjGL?B;10n`oCzDa@<2
+R4
 S1
-Z13 w1581233202
-8extension.sv
-Fextension.sv
-L0 1
-R6
+R0
+R5
+8C:/16-bit-MP/extension.sv
+FC:/16-bit-MP/extension.sv
+!i122 12
+L0 1 30
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R9
+!s107 C:/16-bit-MP/extension.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/16-bit-MP/extension.sv|
+!i113 1
+R12
+R13
 vlatch_mem
 R1
 R2
-!s100 V58aeD4QVn>jEPhE]VmJo1
-I4TzOGZfQAGZC:5E<`Ch]52
-VAAUzg4TdL1E<4_lVMVOif2
+!i10b 1
+!s100 SUNFIjfP_1@^LNjl]`5_k0
+R3
+I2LAS0>EkTPK7T;IQ>lF@P2
+R4
 S1
-R10
-R11
-R12
-L0 105
-R6
+R0
+R5
+R18
+R19
+!i122 11
+L0 105 13
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R9
+R20
+R21
+!i113 1
+R12
+R13
 vmuxflags
 R1
-R2
-!s100 R>Y_lLc[haT`0HNVfVaN20
-IdEnX7fZ_:[G>C5lK<:OKi0
-V7koeV[TEzXZ1TX^La6[Mh3
+Z22 !s110 1769095106
+!i10b 1
+!s100 MBV7SF<h0@F;z5UAz6@l>3
+R3
+Iag?fCoaHdzFOMG@6;ln>l2
+R4
 S1
-R13
-8muxflags.sv
-Fmuxflags.sv
-L0 1
-R6
+R0
+R5
+8C:/16-bit-MP/muxflags.sv
+FC:/16-bit-MP/muxflags.sv
+!i122 13
+L0 1 5
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+Z23 !s108 1769095106.000000
+!s107 C:/16-bit-MP/muxflags.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/16-bit-MP/muxflags.sv|
+!i113 1
+R12
+R13
 vmuxN
 R1
-R2
-!s100 8iE[D>GchhlfK6Vdo51fJ1
-Ij6NU4HhkUZaFi1oLj409]3
-VL5:_9>8IR7;[56<TF5hSZ0
+R22
+!i10b 1
+!s100 Dl@[:EafYeK^a]1WP6zPl3
+R3
+IP82KGkiVFhiP50degNSTM2
+R4
 S1
-w1673290254
-8muxN.sv
-FmuxN.sv
-L0 1
-R6
+R0
+R5
+8C:/16-bit-MP/muxN.sv
+FC:/16-bit-MP/muxN.sv
+!i122 14
+L0 1 9
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R23
+!s107 C:/16-bit-MP/muxN.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/16-bit-MP/muxN.sv|
+!i113 1
+R12
+R13
 nmux@n
 vreg_file
 R1
-R2
-!s100 g7W[>O<`j;Z>QjnFKO@`<0
-IX8S1YI6HI<=oT?`fYYk5P3
-V7E::NVH<?Xh5c8h?An;0U2
+R22
+!i10b 1
+!s100 koHZQ5UWcFBAAELY87=CI1
+R3
+I7^NzoD_>cb1j?oS0KNJ`30
+R4
 S1
-w1670669562
-8reg_file.sv
-Freg_file.sv
-L0 1
-R6
+R0
+R5
+8C:/16-bit-MP/reg_file.sv
+FC:/16-bit-MP/reg_file.sv
+!i122 15
+L0 1 36
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R23
+!s107 C:/16-bit-MP/reg_file.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/16-bit-MP/reg_file.sv|
+!i113 1
+R12
+R13
 vregister
 R1
-R2
-!s100 iKhOej[BQ<24Ndm;EJ_<;2
-Ik6fW2=ATOo>5ER1DQ4BKE0
-VaiNh5]d6_OTP9c<TZQcEc1
+R22
+!i10b 1
+!s100 d0W0dFzhBD6LTi_^9PCCA1
+R3
+IQO8WNf6NPCL?TndPHgcD42
+R4
 S1
-R13
-8register.sv
-Fregister.sv
-L0 1
-R6
+R0
+R5
+8C:/16-bit-MP/register.sv
+FC:/16-bit-MP/register.sv
+!i122 16
+L0 1 16
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R23
+!s107 C:/16-bit-MP/register.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/16-bit-MP/register.sv|
+!i113 1
+R12
+R13
 vtb_alu16
 R1
 R2
-!s100 5J6L?mTX5[JikTikK0:Cn3
-If`YTFCd;B6gA:][iC8Y<d1
-VfSP7n>@1d]j530kFPY?:U2
-S1
+!i10b 1
+!s100 0l>cFG8^;oOU5NYXUgF1z1
 R3
+IGPbhZoaM=HWPlDfAhdPF60
 R4
+S1
+R0
 R5
-L0 73
 R6
+R7
+!i122 9
+L0 73 36
+R8
 r1
 !s85 0
 31
-!s101 -O0
-o-O0
+R9
+R10
+R11
+!i113 1
+R12
+R13

@@ -48,6 +48,15 @@ logic decodeinstr,we3,rst,hlt,wrpc,prefix,jump,ch,ret,wrflags,seladdr,state_flag
  logic [2:0] spc_b;
  
  logic [15:0] w_ALUresult;
+
+ logic stk_push, stk_pop;
+logic stk_busy, stk_pop_valid;
+logic [15:0] stk_addr, stk_wdata, stk_pop_data, sp_value;
+logic stk_we;
+
+logic stack_owns_bus;
+
+
  
  // start description ERM16
 
@@ -90,15 +99,80 @@ register #(16) PC(DI_PC,clk,rst,wrpc,DO_PC);
 
 muxN mux_sel_addr ({b,DO_PC},seladdr,w2);
 
-register #(16) ARR(w2,clk,rst,~hlt,ADDR_BUS);
+logic [15:0] ADDR_BUS_cpu, DO_cpu;
 
-register #(16) MD(a,clk,rst,~hlt,DO);
-
-
-
+register #(16) ARR(w2,clk,rst,~hlt,ADDR_BUS_cpu);
+register #(16) MD(a,clk,rst,~hlt,DO_cpu);
 
 
-control_unit cb(q_ir,clk,state_flag_bit,init,wrmem,ioe,intreq,decodeinstr,we3,rst,hlt,wrpc,prefix,jump,ch,ret,wrflags,seladdr,Jcc,func,stwr,spc_a,spc_b);
+stack16_sync #(.SP_RESET(16'hFFFE)) stack_u (
+  .clk       (clk),
+  .rst_n     (~rst),          // rst-ul tău e activ pe 1, aici vrem activ-low
+
+  .push      (stk_push),
+  .pop       (stk_pop),
+  .push_data (a),             // ce pui pe stack: RD1 latch-uit în 'a'
+
+  .mem_we    (stk_we),
+  .mem_addr  (stk_addr),
+  .mem_wdata (stk_wdata),
+  .mem_rdata (DI),
+
+  .sp        (sp_value),
+  .pop_data  (stk_pop_data),  // optional (nu e obligatoriu dacă scrii din DI)
+  .pop_valid (stk_pop_valid),
+  .busy      (stk_busy)
+);
+
+
+logic cpu_wrmem;
+
+
+
+control_unit cb(
+  .opcode(q_ir),
+  .clk(clk),
+  .state_flag_bit(state_flag_bit),
+  .init(init),
+
+  .stk_pop_valid(stk_pop_valid),
+
+  .wrmem(cpu_wrmem),
+  .ioe(ioe),
+  .intreq(intreq),
+  .decodeinstr(decodeinstr),
+  .we3(we3),
+  .rst(rst),
+  .hlt(hlt),
+  .wrpc(wrpc),
+  .prefix(prefix),
+  .jump(jump),
+  .ch(ch),
+  .ret(ret),
+  .wrflags(wrflags),
+  .seladdr(seladdr),
+
+  .stk_push(stk_push),
+  .stk_pop(stk_pop),
+
+  .Jcc(Jcc),
+  .func(func),
+  .stwr(stwr),
+  .spc_a(spc_a),
+  .spc_b(spc_b)
+);
+
+assign wrmem = stack_owns_bus ? stk_we : cpu_wrmem;
+
+assign stack_owns_bus = stk_push | stk_pop | stk_busy;
+
+// MUX pe magistrala de memorie
+assign ADDR_BUS = stack_owns_bus ? stk_addr  : ADDR_BUS_cpu;
+assign DO       = stack_owns_bus ? stk_wdata : DO_cpu;
+assign wrmem    = stack_owns_bus ? stk_we    : cpu_wrmem;
+
+
+
 
 endmodule
 
